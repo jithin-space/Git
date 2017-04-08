@@ -1,0 +1,38 @@
+git tutorial
+
+about version control system
+	Local Version Control Systems
+	Centralized Version Control Systems
+	Distributed Version Control Systems
+short history of git
+git basics
+	snapshots not differences
+	nearly every operation is local
+	git has integrity
+	git generally only adds data
+	The three states
+		commited,staged,modified
+		repository,staging area, working directory
+	The Command Line
+		Installing git
+			apt-get install git
+		first time git setup
+			local,global,system
+			your identity
+				git config --global user.name "jithin"
+				git config --global user.email jithin@space-kerala.org
+			your editor
+				vim by default
+				git config --global core.editor emacs
+			list your settings
+				git config --list
+				repeated values seen, last value often taken
+				git config user.name
+			getting help
+				git help verb
+				git <verb> help
+				man git-<verb>
+
+chapter 2..Git Basics
+	in progress
+	to be in more	
