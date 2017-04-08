@@ -70,6 +70,17 @@ chapter 2..Git Basics
 	committing your changes
 		git commit
 			def editor will pop up and  show how the commit should be stored
+		git commit -v
+	skipping the staging area
+		git commit -a -m 'commiting without staging)
+	removing files from git
+		remove from git
+		1. remove it tracked files ( remove it from staging area)
+			rm readme
+			git status
+		2.commit...(both steps are done by git rm command )
+
+
 		
 		
 		
