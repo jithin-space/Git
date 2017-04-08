@@ -34,4 +34,5 @@ git basics
 				man git-<verb>
 
 chapter 2..Git Basics
-	
+	in progress
+	to be in more	
