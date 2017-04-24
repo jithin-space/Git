@@ -99,6 +99,9 @@ chapter 2..Git Basics
 		eg git commit -m 'first'
 		   git add forgotten.txt
 		   git commit -amend -m 'first_replaced';
+	unstaging a staged file
+		reset back to staging after you add them to staging area
+		
 		
 
 		
