@@ -75,11 +75,31 @@ chapter 2..Git Basics
 		git commit -a -m 'commiting without staging)
 	removing files from git
 		remove from git
-		1. remove it tracked files ( remove it from staging area)
-			rm readme
-			git status
-		2.commit...(both steps are done by git rm command )
-
+			git rm <filename> remove from both git and working
+			git commit
+		remove only from git
+			git rm --cached <filename>
+			it will be then in untracked files
+	moving files
+		rename
+		git mv abc.text cde.text
+		git status
+	viewing the commit history
+		git log
+		git log -p ( shows the difference induced in each commit)
+		git log -2 ( last two commits)
+		git log --stat
+		git log --pretty=oneline
+		limiting the length of log
+			git log --since=2.months
+			more options like --untill -S
+	undoing things
+		git commit --amend
+		this command uses your current staging area and uses it for the commit
+		eg git commit -m 'first'
+		   git add forgotten.txt
+		   git commit -amend -m 'first_replaced';
+		
 
 		
 		
