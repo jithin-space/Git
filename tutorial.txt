@@ -98,9 +98,13 @@ chapter 2..Git Basics
 		this command uses your current staging area and uses it for the commit
 		eg git commit -m 'first'
 		   git add forgotten.txt
-		   git commit -amend -m 'first_replaced';
+		 	   git commit -amend -m 'first_replaced';
 	unstaging a staged file
 		reset back to staging after you add them to staging area
+		git reset HEAD  tutorial.txt
+		git status		
+	unmodifying a modified file
+		git checkout -- filename
 		
 		
 
