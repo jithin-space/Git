@@ -135,6 +135,20 @@ server you cloned from. (git pull )
 		git push <remote-name> <branch-name>
 		git push origin master
 		** works if you cloned from a remote server having write acess and nobody pushed during the meantime
+	**two points skipped on remote..
+
+
+Tagging..
+-------------------
+	listing tags
+		git tag
+	serch for tags
+		git tag -l 'abc*'
+	creating tags
+		two type..lightweight and annotated..
+		git tag -a v1.0 -m 'message1'
+		git show v1.0
+
 	
 
 		
