@@ -155,7 +155,14 @@ Tagging..
 		git log --pretty=oneline
 		git tag -a v0.0 5117 <part> -m 'message'
 	sharing tags
-		
+		tags not loaded to server on push
+		git push origin v1.0
+		git push origin --tags <for all tags created>
+	git aliases
+		creating aliases for git commands
+		git config --global alias.ci commit
+		git ci
+	
 
 	
 
