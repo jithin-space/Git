@@ -148,6 +148,14 @@ Tagging..
 		two type..lightweight and annotated..
 		git tag -a v1.0 -m 'message1'
 		git show v1.0
+	lightweight tag
+		git tag v3.0
+		git show v3.0 ( only commited info..no tagger info)
+	git tagging later
+		git log --pretty=oneline
+		git tag -a v0.0 5117 <part> -m 'message'
+	sharing tags
+		
 
 	
 
