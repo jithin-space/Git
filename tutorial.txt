@@ -98,15 +98,44 @@ chapter 2..Git Basics
 		this command uses your current staging area and uses it for the commit
 		eg git commit -m 'first'
 		   git add forgotten.txt
-		 	   git commit -amend -m 'first_replaced';
+		   git commit -amend -m 'first_replaced';
 	unstaging a staged file
 		reset back to staging after you add them to staging area
 		git reset HEAD  tutorial.txt
 		git status		
 	unmodifying a modified file
 		git checkout -- filename
-		
-		
+
+	dealing with remote repositories
+		git clone http://github.com/someproject/tcp
+		cd tcp
+		git remote ---------------shows origin--default server name
+		git removte -v
+			shows origin http://github.com/someproject/tcp
+		if we have more contributors and remotes
+			it will list all 
+		adding remote repository
+			git remote add <short-name> url
+		using that contribution
+			git fetch <short-name>
+		fetching and pulling from remotes
+			fetch --means get the data from remote not merge to your current working directory---have to merge manually
+	
+			pull --get the data and automatically merges 
+			git fetch origin..get the latest updates from the remote server since you have cloned or last fetched.
+			git pull origin..get and merge
+
+If you have a branch set up to track a remote branch you can use the git pull command to automatically fetch and then merge a remote branch into your current branch.
+
+by default, the git clone command automatically
+sets up your local master branch to track the remote master branch (or whatever the default branch is called) on the
+server you cloned from. (git pull )
+
+	pushing to your remotes
+		git push <remote-name> <branch-name>
+		git push origin master
+		** works if you cloned from a remote server having write acess and nobody pushed during the meantime
+	
 
 		
 		
