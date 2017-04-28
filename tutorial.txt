@@ -165,6 +165,45 @@ Tagging..
 	
 conflict resolved	
 
+Git Branching
+--------------------------
+	create a new branch
+		git branch testing
+	switching branches
+		git checkout testing
+	for viewing all commits including other branches
+		git log --oneline --decorate --graph --all
+	creating and switching at the same time
+		git checkout -b testing
+	simple merge
+		git merge testing ( while on master)
+		simple moves the head ptr to next
+	three way merge
+		merge point..current head point ...common ancestor
+	basic merge conflicts
+		git merge testing
+		git status (if conflicts)
+		git add conflict_file ( add to staging )
+		open the file (special indication)
+		manually resolve
+		git commit 
+	branch management
+		git branch (list all)
+		git branch -v (list all with last commits on each brach)
+		git branch --merged (and --non-merged)
+		git branch -d testing (delete testing)
+	branching workflows
+	Remote branches
+		no server interaction all this time
+		each brach has a remote brach when it last commuicated.it is immutable ...named remote/branch
+		git fetch origin (loads remote/origin to our repo not merge)
+		useful when using multiple remotes ( git fetch remote2)
+	pushing
+		git push remote brach
+		git push remote localbranchname:remotebranchname
+		
+	tracking branches
+		
 		
 		
 		
