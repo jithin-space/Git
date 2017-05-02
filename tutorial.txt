@@ -203,6 +203,23 @@ Git Branching
 		git push remote localbranchname:remotebranchname
 		
 	tracking branches
+		checking out a localbranch from a remote branch creates
+		tracking branches or upstream branches
+		git checkout --track origin/serverfix
+		git branch -u origin/serverfix (--set-upstream ,specify explicitely)
+		@u shortand for upstream ( git merge @u / origin/master)
+		git branch -vv ( for viewing tracking branch details)
+		(ahead and behind )
+		get current updation git fetch --all
+	pulling
+		fetch + merge = pull
+	delete a remote branch
+		git push origin --delete serverfix
+	Rebasing
+		merge or rebase
+		take the patch on a branch and reapply it on other branch
+		rebasing is for a cleaner history ( looks linear)
+		
 		
 		
 		
