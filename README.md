@@ -1,4 +1,4 @@
-# git tutorial
+# Git tutorial
 
 This tutorial is all about exploring git from basics. It is intended only for learning purposes.
 
@@ -7,13 +7,43 @@ This tutorial is all about exploring git from basics. It is intended only for le
 This chapter is intended to explain why you should learn git, where it is useful and essentially what is git.
 
 
-#About version control systems
+## 1.1 Version Control Systems
 
-	#Local Version Control Systems
-	Centralized Version Control Systems
-	Distributed Version Control Systems
-short history of git
-git basics
+> Version Control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+
+
+    * Local Version Control Systems
+
+Originally we manually maintain specific versions of a file by simply copying it into another location. But it requires constant user intervention and maintanence. 
+
+To deal with this issue programmers long ago developed a  local VCSs that had a simple `database` that kept all the changes to files under revision control. One of such popular VCS tools was a system called RCS.
+
+RCS works by keeping patch sets (ie the difference between files) in a special format on a disk. It can then recreate any file looked like at any point in time by adding up all patches.
+
+    * Centarlized Version Control Systems
+
+Another issue is that we need to collaborate with other developers working on other systems. To deal with this problem, Centralized version control systems developed. Eg. CVS,Subversion and Perforce.
+
+They have a central server and a number of clients that check out files form that central place. The advantage of this mode of version control systems are 
+    * Everyone knows to a certain degree what everyone else on the project is doing.
+    * Administrators have fine grained control over who can do what.
+    * It is easier to maintain than setting up individually each client as in LVCS
+
+This method also has some serious drawbacks including
+    * Single point of failure , lose of everything.
+    * If proper backups are not taken, Both LVCS and CVCS lose everything.
+
+    * Distributed Version Control Systems
+    
+Inorder to solve the problems addressed above, DVCS emerged. In these systems (like Git,Mercurial,Bazaar or Darcs), client don't just check out the latest snapshot of the files : they fully mirror the repository.
+
+Thus if any server dies, any client repositories can be copied back up to the server to restore it. Every checkout is really a full back up of all the data.
+
+These systems deal pretty well with having several remote repositories they can work with, so you can collaborate with different groups of people in different ways simultaneously within the same project.This allows you to set up several types of workflows that aren't possible in centralized systems.
+ 
+
+## 1.2 short history of git
+## 1.3 git basics
 	snapshots not differences
 	nearly every operation is local
 	git has integrity
