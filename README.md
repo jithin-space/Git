@@ -11,8 +11,7 @@ This chapter is intended to explain why you should learn git, where it is useful
 
 > Version Control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
 
-
-    * Local Version Control Systems
+### * Local Version Control Systems
 
 Originally we manually maintain specific versions of a file by simply copying it into another location. But it requires constant user intervention and maintanence. 
 
@@ -20,7 +19,7 @@ To deal with this issue programmers long ago developed a  local VCSs that had a 
 
 RCS works by keeping patch sets (ie the difference between files) in a special format on a disk. It can then recreate any file looked like at any point in time by adding up all patches.
 
-    * Centarlized Version Control Systems
+### * Centarlized Version Control Systems
 
 Another issue is that we need to collaborate with other developers working on other systems. To deal with this problem, Centralized version control systems developed. Eg. CVS,Subversion and Perforce.
 
@@ -33,7 +32,7 @@ This method also has some serious drawbacks including
     * Single point of failure , lose of everything.
     * If proper backups are not taken, Both LVCS and CVCS lose everything.
 
-    * Distributed Version Control Systems
+### * Distributed Version Control Systems
     
 Inorder to solve the problems addressed above, DVCS emerged. In these systems (like Git,Mercurial,Bazaar or Darcs), client don't just check out the latest snapshot of the files : they fully mirror the repository.
 
@@ -42,7 +41,31 @@ Thus if any server dies, any client repositories can be copied back up to the se
 These systems deal pretty well with having several remote repositories they can work with, so you can collaborate with different groups of people in different ways simultaneously within the same project.This allows you to set up several types of workflows that aren't possible in centralized systems.
  
 
-## 1.2 short history of git
+## 1.2 Git History
+
+In 2002, Linux kernel project began using a proprietary DVCS called BitKeeper. In 2005, their relationship broke down and tool's free-of-charge status revoked. Thus linux development community especially Linus Torvals, the creator of linux started to develop their own tools based on their experience in using BitKeeper.Thus git was born
+
+## 1.3 Git Features
+    *Simple
+    *Speed
+    *Strong support for non linear development.
+    *Fully distributed
+    *Ability to handle large projects. (Both speed and size handling)
+
+## 1.4 Git Basics
+    
+Git works differently than other systems like subversion or perforce. Therefore it is essential to understand how it works eventhough they all provide similar functionality and interfaces.
+
+    *Main difference is in how git think about its data. Conceptually ,most other systems store information as list of file based changes. They think of the information they keep as a set of files and changes made to each file over time.
+
+    *Instead Git thinks of its data more like a set of snapshots of a miniature filesystem. Every time you commmit or save the state of your project in git, it basically takes a picture fo what all your file look like at that moment and stores a reference to that snapshot.
+
+    *To be efficient , if the files have not changed,it doesnot store the file again, just a link to the previous identical file it has already stored.
+
+    *Git thinks about its data more like a stream of snapshots.
+
+
+
 ## 1.3 git basics
 	snapshots not differences
 	nearly every operation is local
