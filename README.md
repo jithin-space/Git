@@ -1,7 +1,15 @@
-git tutorial
+# git tutorial
 
-about version control system
-	Local Version Control Systems
+This tutorial is all about exploring git from basics. It is intended only for learning purposes.
+
+## 1. Chapter 1 - Getting Started
+
+This chapter is intended to explain why you should learn git, where it is useful and essentially what is git.
+
+
+#About version control systems
+
+	#Local Version Control Systems
 	Centralized Version Control Systems
 	Distributed Version Control Systems
 short history of git
