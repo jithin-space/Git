@@ -11,7 +11,7 @@ This chapter is intended to explain why you should learn git, where it is useful
 
 > Version Control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
 
-### * Local Version Control Systems
+###     * Local Version Control Systems
 
 Originally we manually maintain specific versions of a file by simply copying it into another location. But it requires constant user intervention and maintanence. 
 
@@ -19,7 +19,7 @@ To deal with this issue programmers long ago developed a  local VCSs that had a 
 
 RCS works by keeping patch sets (ie the difference between files) in a special format on a disk. It can then recreate any file looked like at any point in time by adding up all patches.
 
-### * Centarlized Version Control Systems
+###      * Centarlized Version Control Systems
 
 Another issue is that we need to collaborate with other developers working on other systems. To deal with this problem, Centralized version control systems developed. Eg. CVS,Subversion and Perforce.
 
@@ -46,35 +46,62 @@ These systems deal pretty well with having several remote repositories they can 
 In 2002, Linux kernel project began using a proprietary DVCS called BitKeeper. In 2005, their relationship broke down and tool's free-of-charge status revoked. Thus linux development community especially Linus Torvals, the creator of linux started to develop their own tools based on their experience in using BitKeeper.Thus git was born
 
 ## 1.3 Git Features
-    *Simple
-    *Speed
-    *Strong support for non linear development.
-    *Fully distributed
-    *Ability to handle large projects. (Both speed and size handling)
+    * Simple
+    * Speed
+    * Strong support for non linear development.
+    * Fully distributed
+    * Ability to handle large projects. (Both speed and size handling)
 
 ## 1.4 Git Basics
     
 Git works differently than other systems like subversion or perforce. Therefore it is essential to understand how it works eventhough they all provide similar functionality and interfaces.
 
-    *Main difference is in how git think about its data. Conceptually ,most other systems store information as list of file based changes. They think of the information they keep as a set of files and changes made to each file over time.
+    * Main difference is in how git think about its data. Conceptually ,most other systems store information as list of file based changes. They think of the information they keep as a set of files and changes made to each file over time.
 
-    *Instead Git thinks of its data more like a set of snapshots of a miniature filesystem. Every time you commmit or save the state of your project in git, it basically takes a picture fo what all your file look like at that moment and stores a reference to that snapshot.
+    * Instead Git thinks of its data more like a set of snapshots of a miniature filesystem. Every time you commmit or save the state of your project in git, it basically takes a picture fo what all your file look like at that moment and stores a reference to that snapshot.
 
-    *To be efficient , if the files have not changed,it doesnot store the file again, just a link to the previous identical file it has already stored.
+    * To be efficient , if the files have not changed,it doesnot store the file again, just a link to the previous identical file it has already stored.
 
-    *Git thinks about its data more like a stream of snapshots.
+#### * Git thinks about its data more like a stream of snapshots.
+
+#### * nearly every operation is local
+
+There a little set of operations that requires you to be online. Ie you can do alot of things even if you are not connected to the server.
+
+#### * git has integrity
+
+Everything in Git is check-summed before it is stored and is then referred to by that checksum. This means it is impossible to change the contents of any file or directory without Git knowing about it.
+
+It uses SHA-1 hash. This is a 40 character string composed of hexadecimal characters and calculated based on the contents of a file or directory structure in Git. 
+
+In fact, Git stores everything in its database not by file name but by the hash value of its contents.
+
+#### * git generally only adds data
+
+Every operation in Git only add data to the Git database. It is hard to get the system to do anything that is not undoable or to make it erase data in any way.
+
+
+#### * The three states
+
+In git there are three main states that your files can reside in.Commited,Staged and Modified. Commited means that the data is safely stored in your local database. Modified means that you have modified the file ,but have not commited it into your database yet. Staged means you have marked a modified file in its current version to go into your next commit snapshot.
+
+Hence , we have also three main sections of a git project: the Git Directory, the Working Directory and the Staging Area.
+
+Git directory is where git stores its meatadata and object database for your project. It is important to git, and it is what is copied when you clone a repository from another computer.
+
+Working directory is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.
+
+Staging area is a file, generally contained in your git directory, that stores information about what will go into your next commit. It is sometimes refered to as the `index` but it is also common to refer to it as the staging area.
+
+#### * Git Workflow
+    1. You Modify files in your working directory.
+    2. You stage the files, adding the snapshots of them to your staging area.
+    3. You do a commit , which takes the files as they are in the staging area and stores that snapshot permanently to your Git Directory.
+
+commit --- modify --- stage -- commit <loop>
 
 
 
-## 1.3 git basics
-	snapshots not differences
-	nearly every operation is local
-	git has integrity
-	git generally only adds data
-	The three states
-		commited,staged,modified
-		repository,staging area, working directory
-	The Command Line
 		Installing git
 			apt-get install git
 		first time git setup
